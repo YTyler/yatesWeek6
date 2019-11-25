@@ -5,7 +5,7 @@ export class DocRequest {
   }
   async getBySymptom() {
     try {
-      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?query=${this.symptom}&location=45%2C-122.413%2C100&user_location=45%2C-122.413&skip=0&limit=10&user_key=${process.env.API_KEY}`); //insert api call and call parameters
+      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?query=${this.symptom}&location=45%2C-122.413%2C100&user_location=45%2C-122.413&skip=0&limit=10&user_key=${process.env.API_KEY}`);
       let jsonResponse = await response.json();
       return jsonResponse;
     } catch(error) {
