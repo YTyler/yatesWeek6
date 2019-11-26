@@ -23,7 +23,19 @@ $(document).ready(function() {
     })();
   });
 
-  function displayElements(response) {
-    //display list of doctors
-  }
+  const displayElements = (output) => { //display doctors
+    //check if limited to 10 outputs
+    for (let i = 0; i < output.data.length; i++) {
+      //display doctor first name and last name
+      
+      //for each practice i
+        //if practice within search area === true
+          //print "practice #i"
+          //display address, phone number, website and whether or not the doctor is accepting new patients
+
+    }
+
+    console.log(output);
+  };
+
 });
