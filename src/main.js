@@ -25,9 +25,15 @@ $(document).ready(function() {
 
   const displayElements = (output) => { //display doctors
     //check if limited to 10 outputs
+    const docOutput = $('#docOutput');
+    docOutput.html('');
     for (let i = 0; i < output.data.length; i++) {
       //display doctor first name and last name
-      
+      docOutput.append(`
+        First Name: ${output.data[i].profile.first_name} <br>
+        Last Name: ${output.data[i].profile.last_name} <br>
+        <br>
+        `);
       //for each practice i
         //if practice within search area === true
           //print "practice #i"
