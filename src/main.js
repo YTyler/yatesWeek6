@@ -47,22 +47,21 @@ $(document).ready(function() {
               Phone Number: ${output.data[i].practices[j].phones[0].number} <br>
               Website: ${output.data[i].practices[j].visit_address.website} <br>
               <br>
-              `)
+              `);
               if (output.data[i].practices[j].accepts_new_patients) {
                 docOutput.append(`
                   Accepting New Patients <br>
                   <br>
-                  `)
-              } else {
-                docOutput.append(`
-                  Not accepting New Patients <br>
-                  <br>
-                  `)
+                  `);
+                } else {
+                  docOutput.append(`
+                    Not accepting New Patients <br>
+                    <br>
+                    `);
+                  }
+                }
               }
-          }
-        }
-      }
-      console.log(output);
-    };
+            }
+          };
 
-  });
+        });
